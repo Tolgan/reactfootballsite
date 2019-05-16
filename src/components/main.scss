@@ -1,16 +1,29 @@
+
 $mylight:rgb(214, 139, 139) ;
 $myred:rgb(185, 27, 27);
 $myblack:rgba(66, 63, 63, 0.596);
 .mainsection{position:relative}
-nav{background-color:rgba(0, 0, 0, 0.5)}
-.navlogo{height:4rem} ; 
-.modal_lig{ cursor:pointer }
+nav{background-color:rgba(0, 0, 0, 0.5);height:5rem}
+.navlogo{height:4rem;}
+.collapses{float:right}
+  ul{float:left}
+.modal_lig{ cursor:pointer; }
+li{float:left ;overflow:hidden ; &li{list-style-type:"none" !important ;}}
 ul a, .modal_lig{font-size:3rem;color:$mylight ;font-family: 'Raleway', sans-serif; text-decoration:none !important ;
     &:hover {color:$myred ;span{background-color:$myblack};  animation-name:link; animation-duration: .3s;animation-iteration-count: 3
    }}
-.myvid{position:absolute;top:0;height:100vh;object-fit:cover;width:100%;z-index:-999; }
+.myvid{display:none}
+.imgresp{position:absolute;opacity:.7;height:calc(100vh - 5rem);width:100%}
+@media screen and (min-width:1160px){
+.myvid{display:block;position:absolute;top:0;height:100vh;object-fit:cover;width:100%;z-index:-999; }
+.imgresp{display:none;}}
+
 .football_icon{font-size:5rem;text-align:center;animation-name:ball ;animation-duration:3s;animation-iteration-count: infinite;
  }
+@media screen and (max-width:1160px){
+ .collapses{float:none;} ; ul{top:50%;left:50%;transform:translate(-50%,-50%) ;color:black;
+    float:none !important;position:fixed;z-index:1000; a,.modal_lig{color:black } }   }
+
 @keyframes link { 
     50% {transform:translateX(2px)  }     
      100%{transform:translateX(-2px) }  } 

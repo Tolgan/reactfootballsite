@@ -12,6 +12,7 @@ export default class Home extends Component {
   render() {
     return (
     <React.Fragment>
+      <img src="./images/ronaldinho.jpg" className="imgresp" alt="ronaldinho" />
       <video className="myvid" autoPlay loop muted >
         <source type="video/mp4" src="./images/abdus.mp4" ></source>
         Your browser doesnt support video
